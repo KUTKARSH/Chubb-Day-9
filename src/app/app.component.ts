@@ -15,6 +15,34 @@ export class AppComponent {
   ];
   url = this.urls[0];
 
+  PLANS : Array<any> = [{name : 'FREE',price : 0,av : ['Unlimited Users',
+  '150GB Storage',
+  'Unlimited Public Projects',
+  'Community Access'],
+  na : [
+    'Unlimited Private Projects',
+    'Dedicated Phone Support',
+    'Unlimited Free Subdomains','Monthly Status Reports]'
+  ]
+  }
+  ,{name : 'PLUS' , price : 9,av : ['Unlimited Users',
+  '150GB Storage',
+  'Unlimited Public Projects',
+  'Community Access',
+  'Unlimited Private Projects',
+  'Dedicated Phone Support',
+  'Unlimited Free Subdomains'],na : [
+    'Monthly Status Reports]'
+  ]},
+  {name : 'PRO',price : 49 , av : ['Unlimited Users',
+  '150GB Storage',
+  'Unlimited Public Projects',
+  'Community Access',
+  'Unlimited Private Projects',
+  'Dedicated Phone Support',
+  'Unlimited Free Subdomains',
+  'Monthly Status Reports]'] , na : []}];
+
   FREEAV : Array<any> = ['Unlimited Users',
   '150GB Storage',
   'Unlimited Public Projects',
@@ -45,7 +73,6 @@ export class AppComponent {
   PRONA : Array<any> = [];
 
   constructor(){
-  	
   	setInterval( () => {
   	this.url = this.urls[Math.floor(Math.random() * 3)];
   	}, 1000);
